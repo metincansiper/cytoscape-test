@@ -1,0 +1,23 @@
+{
+  "name": "cytoscape-test",
+  "version": "1.0.0",
+  "description": "Basic cytoscape.js test app",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-bundle-js": "browserify app/main.js -o app/bundle.js --debug",
+    "watch-js": "nodemon -e js --watch app --ignore app/bundle.js -x \"npm run build-bundle-js\""
+  },
+  "author": "metincansiper",
+  "dependencies": {
+      "jquery": "~2.2.4",
+      "cytoscape": "cytoscape/cytoscape.js#master"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "nodemon": "1.11.0"
+  }
+}
